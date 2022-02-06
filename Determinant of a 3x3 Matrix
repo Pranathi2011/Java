@@ -1,0 +1,24 @@
+import java.util.*;
+import java.io.*;
+
+class det_matrix
+{
+   public static void main(String[] args)
+    {
+      Scanner s  = new Scanner(System.in);
+      int[][] M = new int[3][3];
+      System.out.println("Enter the matrix : ");
+      for(int i=0;i<3;i++)
+         {
+            for(int j=0;j<3;j++)
+             {
+                M[i][j] = s.nextInt(); 
+             }
+         }
+      
+      int a1 = M[0][0]*(M[1][1]*M[2][2] - M[1][2]*M[2][1]);
+      int a2 = M[0][1]*(M[1][0]*M[2][2] - M[1][2]*M[2][0]);
+      int a3 = M[0][2]*(M[1][0]*M[2][1] - M[1][1]*M[2][0]);
+      System.out.println("Determinant of Matrix M : " + (a1+a2+a3));
+    }
+}
